@@ -3,9 +3,15 @@ the server port is 50052 and client port is 50051
 
 grpc-dump should forward client request from 50051 to 50052
 
+
 ```
-grpc-dump --port=50051 --destination=localhost:50052
+grpc-dump --port=50051 --destination=localhost:50052 | jq .
 ```
+
+
+
+
+
 
 python client get picky? in those 4 command, only the last one works (grpc_dump can dump the request/response)
 
